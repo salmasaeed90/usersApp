@@ -1,0 +1,38 @@
+header {
+  background-color: #edc84b;
+  height: 70px;
+  width: 100%;
+  color: #f7f2e9;
+  padding: 0 1.5rem;
+}
+.list {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+}
+.logo {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-left: 1.25rem;
+  padding-top: 0.5rem;
+  cursor: pointer;
+}
+.search input {
+  width: 30rem;
+  padding: 1.5rem;
+  border-radius: 3rem;
+  margin: 0 auto;
+}
+.search input::placeholder {
+  font-size: 1.5rem;
+  transition: all 0s;
+}
+.search input:hover {
+  transform: scale(1.1);
+  border: 2px solid #af8602;
+}
+.user {
+  font-size: 1.8rem;
+  color: #af8602;
+}

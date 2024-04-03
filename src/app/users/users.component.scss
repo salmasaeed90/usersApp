@@ -1,0 +1,34 @@
+.card-user {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.img {
+  width: 12.5rem;
+  height: 12.5rem;
+  border: 3px solid #fff;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+.card-user:hover .img {
+  transform: scale(1.1) rotate(10deg);
+  outline: 3px solid #edc84b;
+}
+.info {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card-user:hover .info {
+  transform: translateX(10px);
+}
+
+.desc {
+  font-size: 1.2rem;
+}

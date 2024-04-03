@@ -1,0 +1,16 @@
+<section>
+  <header>
+    <ul class="list">
+      <li class="logo" [routerLink]="['/users']">UsersApp</li>
+      <li class="search">
+        <input
+          type="text"
+          placeholder="find user by Id..."
+          [(ngModel)]="userId"
+          (keyup)="findUser()"
+        />
+      </li>
+      <!-- <li class="user">user name</li> -->
+    </ul>
+  </header>
+</section>

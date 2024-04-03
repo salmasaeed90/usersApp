@@ -1,0 +1,26 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col sm-12">
+        <div class="user py-5">
+          <div class="uesr-img">
+            <img [src]="user?.avatar" [alt]="user?.first_name" />
+          </div>
+          <div class="user-info py-4">
+            <h4 class="fw-bold">
+              {{ user?.first_name }} {{ user?.last_name }}
+            </h4>
+            <span class="user-email text-danger">{{ user?.email }}</span>
+            <p class="w-50">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate, explicabo!
+            </p>
+          </div>
+          <button class="btn fs-4 p-2 px-4" (click)="backToHome()">
+            Back to users &#10143;
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

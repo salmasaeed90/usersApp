@@ -1,0 +1,57 @@
+<section>
+  <div class="container">
+    <div class="row g-3">
+      <div
+        class="col-lg-4 col-md-2 col-sm"
+        *ngFor="
+          let user of allUsers
+            | paginate
+              : {
+                  id: 'usersPaginate',
+                  itemsPerPage: per_pages,
+                  currentPage: currentPage,
+                  totalItems: total
+                }
+        "
+      >
+        <div
+          class="card-user m-3 pt-5"
+          roll="button"
+          [routerLink]="['/userdetails', user.id]"
+        >
+          <div class="img">
+            <img [src]="user.avatar" [alt]="user.first_name" />
+          </div>
+          <div class="info">
+            <span class="name">{{ user.first_name }} {{ user.last_name }}</span>
+            <!-- <span class="last"></span> -->
+            <p class="desc text-danger">
+              {{ user.email }}
+            </p>
+          </div>
+          <hr />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pt-5">
+    <pagination-controls
+      id="usersPaginate"
+      (pageChange)="pageChanged($event)"
+      (pageBoundsCorrection)="pageChanged($event)"
+      [directionLinks]="true"
+      [maxSize]="9"
+      [autoHide]="true"
+      [responsive]="true"
+      previousLabel="Previous"
+      nextLabel="Next"
+      screenReaderPaginationLabel="Pagination"
+      screenReaderPageLabel="page"
+      screenReaderCurrentLabel="You're on page"
+    >
+    </pagination-controls>
+  </div>
+</section>
+<!--      
+-->
