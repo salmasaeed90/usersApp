@@ -12,6 +12,9 @@ import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StoreModule } from '@ngrx/store';
+import { Usersreducer } from './users-store/users.reducers';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     NgxSpinnerModule,
     BrowserAnimationsModule,
+    StoreModule.forRoot({ users: Usersreducer }, {}),
+    EffectsModule.forRoot([]),
   ],
   providers: [],
   bootstrap: [AppComponent],
